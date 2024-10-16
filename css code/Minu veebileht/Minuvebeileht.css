@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.redd.it/w1ylf29uaahb1.jpg');
+    background-size: 50%; /* Set background image size to half */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Center the background image */
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-box input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px; /* Adjust based on your layout */
+    left: 20px; /* Adjust based on your layout */
+}
+
+.tab {
+    padding: 10px;
+    background-color: green; /* Change tab background color to green */
+    margin: 5px 0;
+    cursor: pointer;
+    color: white; /* Change text color to white for better visibility */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.content {
+    text-align: center;
+    margin-top: 100px; /* Adjust margin as needed */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.year-footer {
+    margin-right: 20px;
+}

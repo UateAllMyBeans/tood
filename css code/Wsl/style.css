@@ -1,0 +1,42 @@
+*{
+padding: 0;
+margin: 0;
+}
+
+body{
+    background-color:#383434;
+}
+
+.mainTitle {
+   font-size: 64px;
+   color: white;
+}
+
+.subheading {
+font-size: 48px;
+color:green;
+}
+input{
+    border-bottom-left-radius: 10%;
+    border-top-left-radius: 10%;
+}
+ 
+button{
+  border-top-right-radius:25% ;
+  border-bottom-right-radius: 25%;
+  background-color: yellowgreen;
+}
+
+a{
+    color: green;
+}
+
+.box2{
+    display: flex;
+    justify-content: center;
+}
+
+.header-link {
+    display: block;
+    text-align: center;
+}

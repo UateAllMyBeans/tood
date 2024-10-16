@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Crazy Hamburger Company</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Crazy Hamburger Company</div>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+        </div>
+    </div>
+    <div class="tabs">
+        <div class="tab" id="homepage">Homepage</div>
+        <div class="tab" id="about-us">About Us</div>
+    </div>
+    <div class="content">
+        <div class="about" id="about-us-content">About us</div>
+        <div class="support" id="support-content">Support is working on it</div>
+    </div>
+    <div class="footer">
+        <div class="support-footer"><a href="#" onclick="showContent('support')">Support</a></div>
+        <div class="year-footer">@2024</div>
+    </div>
+
+    <script>
+        // Function to change content dynamically
+        function showContent(tab) {
+            var content = {
+                homepage: "Welcome to my website",
+                about: "About Us",
+                support: "Support is working on it"
+            };
+
+            document.getElementById('about-us-content').textContent = content[tab] || '';
+            document.getElementById('support-content').textContent = content[tab] === 'support' ? content.support : '';
+        }
+    </script>
+</body>
+</html>
+<style>
+    body {
+        background: url('https://i.redd.it/w1ylf29uaahb1.jpg') center/cover no-repeat fixed
+    }

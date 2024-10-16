@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kauri tunnitöö</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="nav-links">
+            <a href="#">Osta pilet</a>
+            <a href="#">Sõiduplaanid</a>
+            <a href="#">Pilet tagastamine</a>
+            <a href="#">Ärikliendileping</a>
+        </nav>
+        <h1>Osta bussipiletid</h1>
+    </header>
+
+    
+    <div class="centered-container">
+        <div class="form-container">
+            <form action="#">
+                <div class="trip-type">
+                    <button type="button" class="active">Üks suund</button>
+                    <button type="button">Edasi-tagasi</button>
+                </div>
+
+                <label for="departure">Lähtepeatus</label>
+                <input type="text" id="departure" name="departure" placeholder="Sisesta lähtepeatus">
+
+                <label for="destination">Sihtpeatus</label>
+                <input type="text" id="destination" name="destination" placeholder="Sisesta sihtpeatus">
+
+                <label for="date">Kuupäev</label>
+                <input type="text" id="date" name="date" value="2024-10-16" readonly>
+
+                <button type="submit" class="search-btn">OTSI REISE</button>
+            </form>
+        </div>
+
+        <div class="popular-routes">
+            <h2></h2>
+            <ul>
+               
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
+<style>
+    body {
+        background: url('https://webcms.tpilet.ee/static/taustapilt.jpg') center/cover no-repeat fixed
+    }
