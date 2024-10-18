@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauri Bussiveebileht</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: url('https://webcms.tpilet.ee/static/taustapilt.jpg') center/cover no-repeat fixed;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FF6600;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 100px);
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .trip-type {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .trip-type button {
+            background-color: #FF6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .trip-type button.active {
+            background-color: #FF6600;
+        }
+
+        .trip-type button:hover {
+            background-color: #E55A00;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .search-btn {
+            width: 100%;
+            background-color: #FF6600;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .search-btn:hover {
+            background-color: #E55A00;
+        }
+
+        .popular-routes {
+            margin-top: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .popular-routes h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .popular-routes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .popular-routes li {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .popular-routes li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .popular-routes li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-links">
+            <a href="#">Osta pilet</a>
+            <a href="#">Sõiduplaanid</a>
+            <a href="#">Pilet tagastamine</a>
+            <a href="#">Ärikliendileping</a>
+        </nav>
+        <h1>Osta bussipiletid</h1>
+    </header>
+
+    <div class="centered-container">
+        <div class="form-container">
+            <form action="#">
+                <div class="trip-type">
+                    <button type="button" class="active">Üks suund</button>
+                    <button type="button">Edasi-tagasi</button>
+                </div>
+
+                <label for="departure">Lähtepeatus</label>
+                <input type="text" id="departure" name="departure" placeholder="Sisesta lähtepeatus">
+
+                <label for="destination">Sihtpeatus</label>
+                <input type="text" id="destination" name="destination" placeholder="Sisesta sihtpeatus">
+
+                <label for="date">Kuupäev</label>
+                <input type="text" id="date" name="date" value="2024-10-16" readonly>
+
+                <button type="submit" class="search-btn">OTSI REISE</button>
+            </form>
+        </div>
+
+        <div class="popular-routes">
+        </div>
+    </div>
+
+</body>
+</html>
