@@ -1,0 +1,159 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #0a0317; color: #fff; text-align: center; }
+        .container, footer { padding: 20px; }
+        .section { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; padding: 20px; }
+        .left-text, .right-content { flex: 1; max-width: 45%; text-align: left; }
+        .left-text h3 { font-size: 2rem; color: #fff; margin-bottom: 10px; }
+        .left-text p { color: #bbb; line-height: 1.5; }
+        .right-content .card { display: flex; align-items: center; background: #3a3a3a; border-radius: 8px; padding: 20px; color: #fff; margin: 10px 0; }
+        .right-content .card img { width: 30px; height: 30px; margin-right: 10px; }
+        .right-content .card h4 { color: #bd93f9; margin: 0; }
+        .right-content .card p { color: #bbb; font-size: 0.9rem; margin: 0; }
+        h1 { font-size: 2.5rem; color: #ff79c6; }
+        h2 { font-size: 2rem; margin: 40px 0 20px; color: #bd93f9; }
+        footer { background: #14072b; margin-top: 40px; }
+        button { padding: 10px 20px; background: #6c45e7; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #8058f7; }
+        .branding-image { max-width: 100%; height: auto; margin: 20px 0; }
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0a0317;
+    color: white;
+}
+
+.modes-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #0a0317;
+}
+
+.modes-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #bd93f9;
+}
+
+.modes-section p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 40px;
+}
+
+/* Flex Container */
+.modes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the boxes */
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Mode Box Styling */
+.mode-box {
+    background: #121029;
+    border-radius: 20px;
+    padding: 20px;
+    width: 260px;
+    text-align: left;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.mode-box h3 {
+    color: #bd93f9;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.mode-box h3 span {
+    color: white;
+}
+
+.mode-box p {
+    color: #bbb;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.mode-box button {
+    background: linear-gradient(90deg, #6c45e7, #9d50ef);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Decorative Circles */
+.decorative-circle {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #6c45e7;
+    z-index: 0;
+}
+
+.decorative-circle::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #9d50ef;
+    top: 10px;
+    left: 10px;
+}
+
+/* Third Wider Box */
+.wide-box {
+    width: calc(100px * 1 + 10px); /* Matches the width of the two upper boxes + gap */
+    flex-basis: 100%; /* Force it to drop below the first two boxes */
+    margin-top: 20px;
+    padding: 30px;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .modes-container {
+        display: grid; /* Switch to grid for precise layout control */
+        grid-template-columns: repeat(2, 1fr); /* Two columns for the top two boxes */
+        grid-gap: 20px; /* Maintain spacing */
+        justify-content: center;
+    }
+
+    .mode-box {
+        width: 100%; /* Automatically align with grid columns */
+        max-width: 260px;
+    }
+
+    .wide-box {
+        grid-column: span 2; /* Make the third box span across both columns */
+        width: calc(260px * 2 + 20px); /* Maintain full width matching the two upper boxes */
+        justify-self: center;
+    }
+
+    .decorative-circle {
+        width: 80px;
+        height: 80px;
+        bottom: -10px;
+        right: -10px;
+    }
+
+    .decorative-circle::after {
+        width: 60px;
+        height: 60px;
+        top: 10px;
+        left: 10px;
+    }
+}
+        
